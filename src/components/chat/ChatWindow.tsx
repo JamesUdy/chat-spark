@@ -35,29 +35,31 @@ export default function ChatWindow({
   backPath,
 }: ChatWindowProps) {
   return (
-    <div className="h-dvh flex flex-col bg-dark-900">
-      <ChatHeader
-        title={title}
-        subtitle={subtitle}
-        currentUser={currentUser}
-        onlineUsers={onlineUsers}
-        onClearMessages={onClearMessages}
-        backPath={backPath}
-      />
+    <div className="h-dvh flex flex-col bg-dark-950 items-center justify-center">
+      <div className="flex flex-col w-full h-full md:h-[95vh] md:max-w-4xl md:border md:border-white/[0.05] md:rounded-2xl md:shadow-2xl bg-dark-900 relative overflow-hidden">
+        <ChatHeader
+          title={title}
+          subtitle={subtitle}
+          currentUser={currentUser}
+          onlineUsers={onlineUsers}
+          onClearMessages={onClearMessages}
+          backPath={backPath}
+        />
 
-      <MessageList
-        messages={messages}
-        currentUser={currentUser}
-        onReaction={onReaction}
-      />
+        <MessageList
+          messages={messages}
+          currentUser={currentUser}
+          onReaction={onReaction}
+        />
 
-      <TypingIndicator typingUsers={typingUsers} />
+        <TypingIndicator typingUsers={typingUsers} />
 
-      <MessageInput
-        onSend={onSendMessage}
-        onTyping={onTyping}
-        disabled={disabled}
-      />
+        <MessageInput
+          onSend={onSendMessage}
+          onTyping={onTyping}
+          disabled={disabled}
+        />
+      </div>
     </div>
   )
 }

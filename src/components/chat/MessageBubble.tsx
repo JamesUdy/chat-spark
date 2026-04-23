@@ -28,7 +28,7 @@ export default function MessageBubble({
 
   return (
     <div
-      className={`group flex gap-2.5 px-4 py-1 ${isOwn ? 'flex-row-reverse' : 'flex-row'}`}
+      className={`group flex gap-2.5 !px-4 !py-1 ${isOwn ? 'flex-row-reverse' : 'flex-row'}`}
       onMouseEnter={() => setShowReactionBar(true)}
       onMouseLeave={() => {
         setShowReactionBar(false)
@@ -51,7 +51,7 @@ export default function MessageBubble({
         {/* Bubble */}
         <div className="relative">
           <div
-            className={`px-3.5 py-2 rounded-2xl text-sm leading-relaxed break-words
+            className={`!px-3.5 !py-2 rounded-2xl text-sm leading-relaxed break-words
               ${isOwn
                 ? 'bg-indigo-500 text-white rounded-br-md'
                 : 'bg-dark-700 text-dark-100 rounded-bl-md'

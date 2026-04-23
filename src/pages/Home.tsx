@@ -54,7 +54,7 @@ export default function Home() {
   const navigate = useNavigate()
 
   return (
-    <div className="min-h-dvh flex flex-col relative overflow-hidden">
+    <div className="min-h-dvh flex flex-col relative overflow-hidden !p-10">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-500/[0.07] blur-[120px]" />
@@ -63,7 +63,7 @@ export default function Home() {
       </div>
 
       {/* Navbar */}
-      <nav className="relative z-10 flex items-center justify-between px-6 md:px-12 py-5">
+      <nav className="relative z-10 flex items-center justify-between px-6 md:px-12 py-6 w-full">
         <div className="flex items-center gap-2.5">
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
             <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -88,13 +88,13 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pb-20">
-        <div className="text-center max-w-2xl mx-auto mb-16 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-medium text-dark-200 mb-6">
+      <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 md:px-12 !py-12 !pb-24 w-full">
+        <div className="text-center max-w-2xl mx-auto w-full mb-16 animate-fade-in flex flex-col items-center gap-6 !py-10">
+          <div className="inline-flex w-fit mx-auto items-center gap-2 !px-3 !py-1.5 rounded-full glass text-xs font-medium text-dark-200 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             Real-time chat — no backend required
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-5">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-5 mx-auto">
             Chat in{' '}
             <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               real time
@@ -103,20 +103,20 @@ export default function Home() {
             <br className="hidden sm:block" />
             two ways.
           </h1>
-          <p className="text-dark-300 text-base md:text-lg max-w-lg mx-auto leading-relaxed">
+          <p className="text-dark-300 w-full text-base md:text-lg max-w-lg mx-auto leading-relaxed text-center">
             Choose an approach below. One uses browser-native APIs for same-device tab sync.
             The other uses WebRTC for true peer-to-peer across any device.
           </p>
         </div>
 
         {/* Approach Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto w-full">
           {approaches.map((approach, i) => (
             <button
               key={approach.id}
               id={`approach-card-${approach.id}`}
               onClick={() => navigate(approach.path)}
-              className={`group relative text-left rounded-2xl border border-white/[0.06] p-7 transition-all duration-300
+              className={`group relative text-left rounded-2xl border border-white/[0.06] !p-7 transition-all duration-300
                 ${approach.borderHover}
                 hover:-translate-y-1 hover:shadow-2xl cursor-pointer
                 animate-slide-up`}
@@ -127,7 +127,7 @@ export default function Home() {
                 className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${approach.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
               />
 
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col gap-6">
                 {/* Icon + Title */}
                 <div className="flex items-start justify-between mb-5">
                   <div>
@@ -167,7 +167,7 @@ export default function Home() {
 
                 {/* CTA */}
                 <div
-                  className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${approach.buttonStyle}`}
+                  className={`inline-flex items-center gap-2 !px-5 !py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${approach.buttonStyle}`}
                 >
                   Start Chatting
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -43,7 +43,7 @@ export default function MessageList({ messages, currentUser, onReaction }: Messa
     <div
       ref={containerRef}
       onScroll={handleScroll}
-      className="flex-1 overflow-y-auto py-4 space-y-0.5 scroll-smooth"
+      className="flex-1 overflow-y-auto !px-6 !py-4 !space-y-1.5 scroll-smooth"
     >
       {messages.length === 0 ? (
         <div className="flex flex-col items-center justify-center h-full text-center px-8">

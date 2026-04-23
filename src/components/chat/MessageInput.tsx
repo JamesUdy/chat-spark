@@ -62,8 +62,8 @@ export default function MessageInput({ onSend, onTyping, disabled = false }: Mes
   }
 
   return (
-    <div className="px-4 py-3 border-t border-white/[0.06]">
-      <div className="flex items-end gap-2">
+    <div className="!px-6 !py-4 border-t border-white/[0.06] bg-dark-900/50 z-10 relative">
+      <div className="flex items-end gap-3">
         {/* Input */}
         <div className="flex-1 relative">
           <textarea
@@ -75,7 +75,7 @@ export default function MessageInput({ onSend, onTyping, disabled = false }: Mes
             placeholder="Type a message..."
             disabled={disabled}
             rows={1}
-            className="w-full px-4 py-2.5 rounded-xl bg-dark-800 border border-white/[0.06] text-dark-50 placeholder:text-dark-500
+            className="!w-full !px-4 !py-2.5 rounded-xl bg-dark-800 border border-white/[0.06] text-dark-50 placeholder:text-dark-500
               focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500/20
               transition-all duration-200 text-sm resize-none leading-relaxed
               disabled:opacity-50 disabled:cursor-not-allowed"
@@ -87,7 +87,7 @@ export default function MessageInput({ onSend, onTyping, disabled = false }: Mes
           id="send-message-btn"
           onClick={handleSend}
           disabled={disabled || !text.trim()}
-          className="w-10 h-10 flex items-center justify-center rounded-xl bg-indigo-500 text-white
+          className="!w-10 !h-10 flex items-center justify-center rounded-xl bg-indigo-500 text-white
             hover:bg-indigo-400 transition-all duration-200 shrink-0
             disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-indigo-500
             active:scale-95 cursor-pointer shadow-lg shadow-indigo-500/20"

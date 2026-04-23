@@ -12,8 +12,8 @@ export default function EmojiPicker({ onSelect, onClose }: EmojiPickerProps) {
       <div className="fixed inset-0 z-40" onClick={onClose} />
 
       {/* Picker */}
-      <div className="absolute bottom-full right-0 mb-2 z-50 glass-strong rounded-xl p-2 animate-fade-in shadow-xl shadow-black/20">
-        <div className="grid grid-cols-4 gap-1">
+      <div className="absolute bottom-full scale-[0.75] -right-20 mb-2 z-50 glass-strong rounded-xl w-[192px] !p-2 animate-fade-in shadow-xl shadow-black/20">
+        <div className="!grid !grid-cols-4 !gap-x-4 !p-2">
           {EMOJI_LIST.map((emoji) => (
             <button
               key={emoji}
@@ -21,7 +21,7 @@ export default function EmojiPicker({ onSelect, onClose }: EmojiPickerProps) {
                 onSelect(emoji)
                 onClose()
               }}
-              className="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-white/[0.08] transition-colors text-lg cursor-pointer active:scale-90"
+              className="!w-9 !h-9 flex items-center justify-center rounded-lg hover:bg-white/[0.08] transition-colors text-lg cursor-pointer active:scale-90"
             >
               {emoji}
             </button>

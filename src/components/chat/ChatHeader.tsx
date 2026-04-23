@@ -22,7 +22,7 @@ export default function ChatHeader({
   const navigate = useNavigate()
 
   return (
-    <div className="flex items-center justify-between px-4 py-3 border-b border-white/[0.06] glass-strong">
+    <div className="flex items-center justify-between !px-6 !py-4 border-b border-white/[0.06] glass-strong z-10 relative">
       {/* Left: Back + Info */}
       <div className="flex items-center gap-3">
         <button
@@ -59,7 +59,7 @@ export default function ChatHeader({
         )}
 
         {/* Online count badge */}
-        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-800 text-xs text-dark-300">
+        <div className="flex items-center gap-1.5 !px-2.5 !py-1 rounded-lg bg-dark-800 text-xs text-dark-300">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
           {onlineUsers.length > 0 ? `${onlineUsers.length + 1}` : '1'} online
         </div>
