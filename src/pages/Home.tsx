@@ -75,7 +75,7 @@ export default function Home() {
           </span>
         </div>
         <a
-          href="https://github.com"
+          href="https://github.com/JamesUdy/chat-spark.git"
           target="_blank"
           rel="noopener noreferrer"
           className="text-dark-400 hover:text-dark-200 transition-colors text-sm flex items-center gap-1.5"
